@@ -1,0 +1,131 @@
+.sale_carousel {
+  .sale_product {
+    display: flex;
+    text-align: center;
+    max-width: 30rem;
+    padding: 0 1rem;
+
+    .sale_image {
+      position: relative;
+      height: 100%;
+      min-height: 20rem;
+      max-height: 30rem;
+      img {
+        height: 100%;
+        width: 100%;
+        max-height: 20rem;
+        position: absolute;
+      }
+    }
+    .sale_category {
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
+    .sale_name {
+      font-size: 1.4rem;
+      font-weight: 500;
+    }
+    button {
+      width: 100%;
+      max-width: 30rem;
+      background: $dark;
+      color: $white;
+      padding: 2rem 0;
+      font-size: 1.3rem;
+      font-weight: 500;
+      transition: 0.2s ease-in-out;
+      svg {
+        margin-left: 1.5rem;
+        margin-top: 0.3rem;
+        margin-bottom: -0.3rem;
+        font-size: 1.4rem;
+      }
+      &:hover {
+        background: $orange;
+        cursor: pointer;
+      }
+    }
+  }
+  .slick-arrow {
+    border-radius: 50%;
+    border: 1px solid $dark;
+    width: 28px;
+    height: 28px;
+  }
+
+  .slick-prev {
+    left: -9rem;
+    &:before {
+      color: $dark;
+      line-height: 2.8rem;
+    }
+  }
+  .slick-next {
+    right: -5rem;
+    &:before {
+      color: $dark;
+      line-height: 2.8rem;
+    }
+  }
+}
+
+/* ============== 1500PX QUERIES ================ */
+@media screen and(max-width: 1500px) {
+  .sale_carousel {
+    .slick-prev {
+      left: -5rem;
+    }
+    .slick-next {
+      right: -5rem;
+    }
+  }
+}
+
+/* ============== 1024PX QUERIES ================ */
+@media screen and(max-width: 1024px) {
+  .sale_carousel {
+    width: $container_desktop_medium !important;
+    .slick-prev {
+      left: -3rem;
+    }
+    .slick-next {
+      right: -3rem;
+    }
+  }
+}
+
+/* ============== 500PX QUERIES ================ */
+@media screen and(max-width: 500px) {
+  .sale_carousel {
+    .sale_product {
+      button {
+        width: 100%;
+        max-width: 30rem;
+        background: $dark;
+        color: $white;
+        padding: 1.5rem 0.6rem;
+        font-size: 1.2rem;
+        font-weight: 500;
+        transition: 0.2s ease-in-out;
+        svg {
+          margin-left: 0.5rem;
+          font-size: 1.4rem;
+        }
+        &:hover {
+          background: $orange;
+          cursor: pointer;
+        }
+      }
+      .sale_category {
+        padding-top: 0.5rem;
+        font-size: 1.2rem;
+        font-weight: 700;
+      }
+      .sale_name {
+        padding-bottom: 0.2rem;
+        font-size: 1.2rem;
+        font-weight: 500;
+      }
+    }
+  }
+}

@@ -1,0 +1,46 @@
+@import "./resets";
+@import "./variables";
+@import "../components/header/header";
+@import "../components/slider/slider";
+@import "../components/sale/sale";
+@import "../components/categories/categories";
+@import "../components/footer/footer";
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&display=swap");
+
+.container {
+  width: $container_desktop;
+  margin: 0 auto;
+}
+
+h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  padding-bottom: 3rem;
+}
+
+@mixin flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+button {
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+/* ============== 1200PX QUERIES ================ */
+@media screen and(max-width: 1200px) {
+  .container {
+    width: $container_desktop_medium;
+  }
+}
+
+/* ============== 800PX QUERIES ================ */
+@media screen and(max-width: 800px) {
+  .container {
+    width: $container_tablet_and_phone;
+  }
+}

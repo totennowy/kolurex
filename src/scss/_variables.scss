@@ -1,0 +1,18 @@
+$dark: #101010;
+$semi-dark: rgba(0, 0, 0, 0.61);
+$white: #ffffff;
+$light-gray: #f3f3f3;
+$orange: #f96e17;
+$light-blue: #51a8bf;
+$navy-blue: #0e1737;
+
+$container_desktop: 80%;
+$container_desktop_medium: 90%;
+$container_tablet_and_phone: 96%;
+
+@mixin flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
